@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+{% load static %}
+{% block css %}
+<link type="text/css" rel="stylesheet" href="{% static 'main.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="main-container">
+  {% for link, text in links %}
+  <a href="{% url link|add:':index' %}"class="app-link {{ link }}">{{ text }}</a>
+  {% endfor %}
+  <a href="{% url 'admin:index' %}"class="app-link admin">Admin Site</a>
+</div>
+{% endblock %}

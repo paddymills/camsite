@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fabrication Request Form</title>
+    <link type="text/css" rel="stylesheet" href="styles/style.css">
+  </head>
+  <body>
+    <div class="header">
+      <h1>Fabrication Instructions Submittal</h1>
+    </div>
+    <div class="mid">
+      <div class="left">
+        <div class="input" id="request_data">
+          <div class="fadeHidden" id="js">
+            <textarea id="job" rows="1" cols="10"
+              scroll="none" placeholder="Job"></textarea>
+            <textarea id="ship" rows="1" cols="7"
+              scroll="none" placeholder="Shipment"></textarea>
+          </div>
+          <div class="fadeHidden" id="group">
+            <textarea id="sectiongroup" rows="1" cols="15" scroll="none" placeholder="Section/Group"></textarea>
+          </div>
+          <div class="fadeHidden" id="bay">
+            <select class="bay" id="fabBay"></select>
+          </div>
+        </div>
+        <div class="input" id="holes">
+          <div class="fra_header">
+            <h4>Holes</h4>
+          </div>
+          <div class="input fadeHidden" id="global">
+            <div class="fra_header">
+              <h4>Global Set (does not apply to MISC)</h4>
+            </div>
+            <table id="global_table">
+              <tbody>
+                <tr>
+                  <td id="global_hole_selection">
+                    <select class="holes" id="global_holes"></select><br>
+                    <div class="switch fsh" id="global_fsh"><p>FSH</p></div>
+                    <div class="switch ra" id="global_ra"><p>RA</p></div>
+                  </td>
+                  <td>
+                    <div class="switch toggle" id="global_lhe"><p>LHE</p></div><br>
+                    <div class="switch toggle" id="global_rhe"><p>RHE</p></div>
+                  </td>
+                  <td>
+                    <div class="button" id="set_global"><p>Set</p></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <table class="input fadeHidden" id="holes_table">
+            <tbody>
+              <th></th>
+              <th>Web</th>
+              <th>Top Flange</th>
+              <th>Bottom Flange</th>
+              <tr class="lhe"><td>LHE</td></tr>
+              <tr class="rhe"><td>RHE</td></tr>
+              <tr class="misc"><td>MISC</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="input" id="slab">
+          <div class="fra_header">
+            <h4>Slab Welding</h4>
+          </div>
+            <table class="input fadeHidden" id="slab_table">
+              <th>Web</th>
+              <th>Top Flange</th>
+              <th>Bottom Flange</th>
+              <tr>
+                <td><select class="splice" id="webSplice"></select></td>
+                <td><select class="splice" id="tfSplice"></select></td>
+                <td><select class="splice" id="bfSplice"></select></td>
+              </tr>
+            </table>
+        </div>
+      </div>
+      <div class="right">
+        <div class="notes">
+          <div class="input">
+            <h3>Notes</h3>
+          </div>
+          <textarea id="notes" rows="28" cols="75" wrap="soft"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="button_bar">
+      <div class="button" id="clear"><p>Reset</p></div>
+      <div class="button" id="load"><p>Load</p></div>
+      <div class="button" id="submit"><p>Submit</p></div>
+      <div class="button" id="test"><p>TEST</p></div>
+    </div>
+    <div class="popup load" id="blanket"></div>
+    <div class="popup">
+      <p class="popup_para"></p>
+      <textarea class="popup_input" rows="1" cols="20" scroll="none"></textarea>
+      <div class="button_bar">
+        <div class="button" id="proceed"><p>OK</p></div>
+        <div class="button" id="escape"><p>Cancel</p></div>
+      </div>
+    </div>
+    <div class="load">
+      <h5>Select a submittal to load</h5>
+      <table>
+        <thead>
+          <tr>
+            <th class="loadID">ID</th>
+            <th class="loadJob">Job</th>
+            <th class="loadShip">Shipment</th>
+            <th class="loadSection">Section/Group</th>
+            <th class="loadSubmitBy">Submitted By</th>
+            <th class="loadDateTime">Submitted Date</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <div class="button_bar">
+        <div class="button" id="loadSubmittal"><p>OK</p></div>
+        <div class="button" id="cancel"><p>Cancel</p></div>
+      </div>
+    </div>
+    <script src='js/jquery-3.2.1.min.js'></script>
+    <script type="text/javascript" src="js/load.js"></script>
+    <script type="text/javascript" src="js/events.js"></script>
+  <script type="text/javascript" src="js/test.js"></script>
+  </body>
+</html>

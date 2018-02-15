@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+
+{% load static %}
+{% block css %}
+  {% for x in css %}
+  <link type="text/css" rel="stylesheet" href="{% static x %}">
+  {% endfor %}
+{% endblock %}
+
+{% block content %}
+<div class="main-container">
+  <h1 class="dev">Fab instructions | in development</h1>
+</div>
+{% endblock %}

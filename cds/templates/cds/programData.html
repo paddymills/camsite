@@ -1,0 +1,20 @@
+<div class="temporary">
+  <table>
+    <thead>
+      <tr>
+        {% for h in head %}
+        <td>{{ h }}</td>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for part in ls %}
+      <tr class="part">
+        {% for x in part %}
+        <td>{{ x }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

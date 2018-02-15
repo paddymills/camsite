@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load cds_extra %}
+
+{% block title %}Detail Bay CDS{% endblock %}
+{% block css %}
+  {% for x in css %}
+  <link type="text/css" rel="stylesheet" href="{% static x %}">
+  {% endfor %}
+{% endblock %}
+
+{% block js %}
+  {% for x in js %}
+  <script type="text/javascript" src="{% static x %}"></script>
+  {% endfor %}
+{% endblock %}
+
+{% block content %}
+<div class="programTable">
+  {% for k, v in ls.items %}
+  <div class="programTableContainer">
+    <h1 class="programListHeader">{{ k }}</h1>
+    <h2 class="programListHeader">Program Count :: {{ v|length }}</h2>
+    <h3 class="programListHeader">Run Time Total :: {{ v|subtotal:"-1" }}</h3>
+    <table>
+      <thead>
+        {% for h in head %}
+        <td>{{ h }}</td>
+        {% endfor %}
+      </thead>
+      <tbody>
+        {% for x in v %}
+        <tr class="program">
+          {% for a in x %}
+          <td>{{ a }}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

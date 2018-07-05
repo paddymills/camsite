@@ -8,8 +8,28 @@
 
 .main-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+
+div.input {
+  background-color: white;
+  border: 1px solid darkgray;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 0 lightgray inset;
+  font-family: Georgia;
+  padding: 2px 3px;
+  height: 1.25em;
+  width: 10em;
+}
+
+div.textbox {
+
+}
+
+div.checkbox {
+  height: 1.25em;
+  width: 1.25em;
 }

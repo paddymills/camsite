@@ -8,14 +8,36 @@
 
 .app-link {
   text-decoration: none;
-  text-align: center;
-  width: 50vh;
+  /* text-align: center; */
+  line-height: 2em;
+  width: 75vh;
+  height: 5vh;
 
   font-family: Helvetica, sans-serif;
   font-weight: 100;
   font-size: 1.5em;
   border: 1px solid black;
   border-radius: 3px;
-  padding: 20px 10px;
-  margin: 5px;
+  padding: 1.25em 1em;
+  margin: 0.5em;
+}
+
+.cds {
+  background-image: url("cnc1.jpg");
+  background-position: right 0em bottom -6em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  resize: both;
+
+  color: GhostWhite;
+}
+
+.fabinstructions {
+  background-image: url("drafting.jpg");
+  background-position: right -1em bottom -4em;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  resize: both;
+
+  color: DarkSlateGrey;
 }

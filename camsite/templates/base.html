@@ -3,12 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>{% block title %}{% endblock %}</title>
+    <link type="text/css" rel="stylesheet" href="/static/base.css">
     {% block css %}
     {% endblock %}
     {% block js %}
     {% endblock %}
   </head>
   <body>
+    <nav>
+      <div class="nav-dropdown">
+        <p class="nav-button">&#9776;</p>
+        <div class="nav-dropdown-items">
+          <a href="/index">Home</a>
+          <a href="{% url 'admin:index' %}"class="admin">Admin</a>
+        </div>
+      </div>
+      <a href="/index">Home</a>
+    </nav>
     {% block content %}
     {% endblock %}
   </body>

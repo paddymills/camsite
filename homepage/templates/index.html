@@ -11,6 +11,5 @@
   {% for link, text in links %}
   <a href="{% url link|add:':index' %}"class="app-link {{ link }}">{{ text }}</a>
   {% endfor %}
-  <a href="{% url 'admin:index' %}"class="app-link admin">Admin Site</a>
 </div>
 {% endblock %}

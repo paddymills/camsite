@@ -9,7 +9,7 @@ def index(request):
     context = {
         'title': 'CAD/CAM Site',
         'links': [
-            ('cds', 'Code Delivery System'),
+            ('cds', 'Detail Bay Nests'),
             ('fabinstructions', 'Fabrication Instructions Form'),
         ]
     }

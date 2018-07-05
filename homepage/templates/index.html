@@ -8,8 +8,11 @@
 
 {% block content %}
 <div class="main-container">
-  {% for link, text in links %}
-  <a href="{% url link|add:':index' %}"class="app-link {{ link }}">{{ text }}</a>
+
+  {% for app, name in APPS %}
+    {% if name != 'Home' %}
+    <a href="{% url app|add:':index' %}"class="app-link {{ app }}">{{ name }}</a>
+    {% endif %}
   {% endfor %}
 </div>
 {% endblock %}

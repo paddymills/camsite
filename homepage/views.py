@@ -8,11 +8,6 @@ def landingpage(request):
 def index(request):
     context = {
         'title': 'CAD/CAM Site',
-        'links': [
-            ('cds', 'Detail Bay Nests'),
-            ('fabinstructions', 'Fabrication Instructions Form'),
-            ('extras', 'Remakes & Extras'),
-        ]
     }
 
     return render(request, 'index.html', context)

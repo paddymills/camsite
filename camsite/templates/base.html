@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <title>{% block title %}{% endblock %}</title>
     <link type="text/css" rel="stylesheet" href="/static/base.css">
+    <link type="text/css" rel="stylesheet" href="/static/common.css">
     {% block css %}
     {% endblock %}
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
     {% block js %}
     {% endblock %}
   </head>
@@ -14,7 +16,9 @@
       <div class="nav-dropdown">
         <p class="nav-button">&#9776;</p>
         <div class="nav-dropdown-items">
-          <a href="/index">Home</a>
+          {% for app, name in APPS %}
+            <a href="{% url app|add:':index' %}">{{ name }}</a>
+          {% endfor %}
           <a href="{% url 'admin:index' %}"class="admin">Admin</a>
         </div>
       </div>

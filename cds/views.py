@@ -38,7 +38,7 @@ def index(request):
         'ls': _data,
         'head': ['Program', 'Thickness', 'Run Time'],
         'css': ['cds/main.css'],
-        'js': ['jquery-3.2.1.min.js', 'cds/programdata.js']
+        'js': ['cds/programdata.js']
     }
     return HttpResponse(template.render(context, request))
 

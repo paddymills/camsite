@@ -1,5 +1,6 @@
 from django.apps import AppConfig
 
 
-class LandingpageConfig(AppConfig):
-    name = 'landingpage'
+class HomepageConfig(AppConfig):
+    name = 'homepage'
+    verbose_name = 'Home'

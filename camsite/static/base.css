@@ -1,20 +1,8 @@
+/* all items in this file pertain to elements in base.html only */
+
 body, html {
   height: 100%;
   margin: 0;
-}
-
-.main-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.dev {
-  font-family: Helvetica, sans-serif;
-  font-weight: 100;
-  font-size: 1.5em;
 }
 
 body > div {

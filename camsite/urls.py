@@ -21,6 +21,7 @@ from django.contrib import admin
 urlpatterns = [
     path('', include('homepage.urls')),
     path('cds/', include('cds.urls'), name='cds'),
+    path('extras/', include('extras.urls'), name='extras'),
     path('fabinstructions/', include('fabinstructions.urls'), name='fabinstructions'),
     path('admin/', admin.site.urls, name='admin'),
 ]

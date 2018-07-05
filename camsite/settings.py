@@ -31,9 +31,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'cds',
-    'fabinstructions',
     'homepage',
+    'cds',
+    'extras',
+    'fabinstructions',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -11,6 +11,7 @@ def index(request):
         'links': [
             ('cds', 'Detail Bay Nests'),
             ('fabinstructions', 'Fabrication Instructions Form'),
+            ('extras', 'Remakes & Extras'),
         ]
     }
 

@@ -10,3 +10,7 @@ def index(request):
         'title': 'FI | dev'
     }
     return HttpResponse(template.render(context, request))
+
+def dev(request):
+    template = loader.get_template('dev_page.html')
+    return HttpResponse(template.render(dict(name='Fab Instr'), request))

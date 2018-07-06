@@ -1,0 +1,17 @@
+p {
+  margin: 5px;
+}
+
+canvas {
+  border: 1px solid DarkSlateGrey;
+  border-radius: 3px;
+  margin: 5px;
+}
+
+input {
+  width: 80px;
+}
+
+.part-data {
+  display: inline-flex;
+}

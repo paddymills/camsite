@@ -9,12 +9,26 @@
   <link type="text/css" rel="stylesheet" href="{% static x %}">
   {% endfor %}
 {% endblock %}
+{% block js %}
+  {% for x in js %}
+  <script type="text/javascript" src="{% static x %}"></script>
+  {% endfor %}
+{% endblock %}
 
 {% block content %}
 <div class="main-container">
-  <h1 class="dev">Remakes\Extras | in development</h1>
-  <div class="input textbox" contenteditable>test</div>
-  <div class="input checkbox">ck</div>
-  <input type="checkbox" name="" value="">
+  {% for f in forms %}
+  <div class="part-data">{{ f }}</div>
+  {% endfor %}
+  <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+
+  <canvas id="sketch-canvas" width="500" height="500"></canvas>
+  <div class="entity-types">
+    <button type="button" name="line">Line</button>
+    <button type="button" name="circle">Circle</button>
+    <button type="button" name="arc">Arc</button>
+    <button type="button" name="text">Text</button>
+  </div>
+  <p id="notes"></p>
 </div>
 {% endblock %}
